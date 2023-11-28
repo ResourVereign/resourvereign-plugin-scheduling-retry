@@ -9,25 +9,25 @@ import { adjust, parse } from 'compact-relative-time-notation';
 
 const schema = {
   properties: {
-    retry: {
+    relativeTimeFromFailure: {
       type: PluginSchemaPropertyType.string,
     },
   },
 };
 
 type RetryData = {
-  retry: string;
+  relativeTimeFromFailure: string;
 };
 
-const initialize = async ({ retry }: RetryData, logger: Logger) => {
+const initialize = async ({ relativeTimeFromFailure }: RetryData, logger: Logger) => {
   return {
     validate() {
       logger.debug(`Starting validation`);
-      return !!parse(retry);
+      return !!parse(relativeTimeFromFailure);
     },
     async scheduleMiddleware(context: ScheduleMiddlewareContext, next: () => Promise<void>) {
       logger.debug(
-        `Intent date: ${context.intent.date}, candidate: ${context.date}, reason: ${context.reason}, retry: ${retry}`,
+        `Intent date: ${context.intent.date}, candidate: ${context.date}, reason: ${context.reason}, relativeTimeFromFailure: ${relativeTimeFromFailure}`,
       );
       if (context.reason !== SchedulingReason.intentFailure) {
         logger.debug(`Reason is not intent failure, nothing to do`);
@@ -37,7 +37,7 @@ const initialize = async ({ retry }: RetryData, logger: Logger) => {
         logger.debug(`Date is undefined, nothing to do`);
         return await next();
       }
-      context.date = adjust(context.date, retry);
+      context.date = adjust(context.date, relativeTimeFromFailure);
       logger.debug(`New retry date: ${context.date}`);
 
       return await next();
