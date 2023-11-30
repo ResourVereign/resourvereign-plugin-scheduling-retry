@@ -1288,10 +1288,10 @@ commander@11.1.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-11.1.0.tgz#62fdce76006a68e5c1ab3314dc92e800eb83d906"
   integrity sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==
 
-compact-relative-time-notation@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/compact-relative-time-notation/-/compact-relative-time-notation-1.0.0.tgz#adea9bd3989ad67cab0d6023c0523c5940df2a62"
-  integrity sha512-JpRLeEPP2GZAUWkpL9Q4Nn1PJ73Ftj4JoPk5zviMcP+jUDMWQYIA3QyyWzLeUiYTeEUZtDsISJrH0xUHi4ErpQ==
+compact-relative-time-notation@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/compact-relative-time-notation/-/compact-relative-time-notation-1.1.0.tgz#71a5e11d11e99eca476b076b1a0fae3f6a3a90d0"
+  integrity sha512-97hlEtqEEKTFVZ+afxSngVV/yUjo+HTMJHZ3Kr9aS8ifl28UcSn2Y9Kix2piDEieW33hokjlXcE5fwnzoSUPTg==
   dependencies:
     date-fns "^2.30.0"
 
