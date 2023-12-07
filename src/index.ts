@@ -1,5 +1,5 @@
 import { Logger } from '@resourvereign/plugin-types/logger.js';
-import { PluginSchemaPropertyType } from '@resourvereign/plugin-types/plugin/index.js';
+import { PluginSchema } from '@resourvereign/plugin-types/plugin/index.js';
 import {
   ScheduleMiddlewareContext,
   SchedulingPlugin,
@@ -7,10 +7,10 @@ import {
 } from '@resourvereign/plugin-types/plugin/scheduling.js';
 import { adjust, parse } from 'compact-relative-time-notation';
 
-const schema = {
+const schema: PluginSchema = {
   properties: {
     relativeTimeFromFailure: {
-      type: PluginSchemaPropertyType.string,
+      type: 'string',
     },
   },
 };
