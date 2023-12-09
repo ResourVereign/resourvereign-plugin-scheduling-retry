@@ -11,6 +11,11 @@ const schema: PluginSchema = {
   properties: {
     relativeTimeFromFailure: {
       type: 'string',
+      metadata: {
+        name: 'If the attempt fails, when should we retry?',
+        description:
+          'Compact relative time modifier to apply to the failure date. A new attempt will be scheduled at this date.',
+      },
     },
   },
 };

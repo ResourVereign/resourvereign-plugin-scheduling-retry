@@ -24,7 +24,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@resourvereign/plugin-types": "^3.3.0",
+    "@resourvereign/plugin-types": "^3.4.0",
     "compact-relative-time-notation": "^1.1.0"
   },
   "devDependencies": {
