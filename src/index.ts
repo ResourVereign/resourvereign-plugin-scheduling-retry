@@ -52,5 +52,6 @@ const initialize = async ({ relativeTimeFromFailure }: RetryData, logger: Logger
 
 export default {
   schema,
-  initialize,
+  register: () => initialize,
+  unregister: () => {},
 } satisfies SchedulingPlugin<RetryData>;
